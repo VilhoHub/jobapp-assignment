@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Rate Finder</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <header class="header">
+    <h1>Your Journey Begins Here</h1>
+    <p class="subtitle">Search unit rates and availability</p>
+  </header>
+
+  <main class="main-content">
+    <div class="booking-form">
+      <div class="form-section">
+        <label for="unitName" class="form-label">Unit</label>
+        <select id="unitName" class="form-input" required>
+          <option value="">Choose your unit</option>
+          <option>Unit 1</option>
+          <option>Unit 2</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="form-section">
+          <label for="arrival" class="form-label">Check-in</label>
+          <input id="arrival" type="date" class="form-input" required />
+        </div>
+        <div class="form-section">
+          <label for="departure" class="form-label">Check-out</label>
+          <input id="departure" type="date" class="form-input" required />
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="guests-header">
+          <label class="form-label">Guests</label>
+          <button type="button" id="addGuest" class="btn-add-guest">
+            <span class="plus-icon">+</span>
+            Add Guest
+          </button>
+        </div>
+        <div id="guestsList" class="guests-list">
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button id="searchRates" class="btn-primary">
+          <span class="btn-text">Search Rates</span>
+          <div class="btn-spinner"></div>
+        </button>
+      </div>
+
+      <div id="message" class="message"></div>
+    </div>
+
+    <div class="results-section">
+      <div class="results-header">
+        <h3>Results</h3>
+      </div>
+      <div id="results" class="results-content">
+        <div class="empty-state">
+          <p>Enter your details and search to see available rates</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
