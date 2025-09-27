@@ -1,0 +1,17 @@
+{
+  "name": "PHP REST App",
+  "image": "mcr.microsoft.com/devcontainers/php:8.2",
+  "forwardPorts": [8080],
+  "postCreateCommand": "php -v",
+  "portsAttributes": {
+    "8080": { "label": "PHP Server", "onAutoForward": "openPreview" }
+  },
+  "customisations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "xdebug.php-pack"
+      ]
+    }
+  }
+}
