@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-require __DIR__ . '/helpers.php';
+require_once __DIR__ . '/helpers.php';
 
-$config = require __DIR__ . '/../config/config.php';
+$config = require_once __DIR__ . '/../config/config.php';
 
 header('Access-Control-Allow-Origin: ' . $config['cors']['allow_origin']);
 header('Access-Control-Allow-Methods: ' . $config['cors']['allow_methods']);
@@ -54,7 +54,7 @@ if ($occupants <= 0 || count($ages) !== $occupants) {
 }
 
 // map unit name to api id
-$map = require __DIR__ . '/../config/units.php';
+$map = require_once __DIR__ . '/../config/units.php';
 if (!array_key_exists($unitName, $map)) {
   respond([
     'error' => 'unknown_unit_name',
