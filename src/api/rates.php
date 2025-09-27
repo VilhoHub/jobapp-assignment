@@ -4,7 +4,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/helpers.php';
 
 $config = require_once __DIR__ . '/../config/config.php';
-require_once __DIR__ . '/../../src/api/rates.php';
+
 
 header('Access-Control-Allow-Origin: ' . $config['cors']['allow_origin']);
 header('Access-Control-Allow-Methods: ' . $config['cors']['allow_methods']);
