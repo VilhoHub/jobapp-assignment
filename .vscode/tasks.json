@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Serve PHP (public/)",
+      "type": "shell",
+      "command": "php -S 0.0.0.0:8080 -t public",
+      "problemMatcher": []
+    }
+  ]
+}
